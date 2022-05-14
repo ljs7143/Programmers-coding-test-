@@ -1,0 +1,15 @@
+<script src="https://gist.github.com/ljs7143/5a3058b7fd13161d140af4f37b0d77a7.js"></script>
+
+
+
+class Solution {
+    public double solution(int[] arr) {
+        double answer = 0;
+        double sum = 0;
+        for(int i = 0; i<arr.length; i++){
+            sum += arr[i];
+        }
+        answer = sum /arr.length; 
+        return answer;
+    }
+}
