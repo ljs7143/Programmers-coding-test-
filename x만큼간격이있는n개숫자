@@ -1,0 +1,15 @@
+<script src="https://gist.github.com/ljs7143/4f2381d8319cf110de73bf48f2722cde.js"></script>
+
+class Solution {
+    public long[] solution(int x, int n) {
+        long[] answer = {};     
+        answer = new long[n];
+        long a = x;
+        
+        for (int i = 0; i<n; i++){
+            answer[i] = a+(a*i);          
+        }
+        
+        return answer;
+    }
+}
