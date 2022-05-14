@@ -1,0 +1,13 @@
+<script src="https://gist.github.com/ljs7143/578299c34468c40658b6bc4a7eb1b375.js"></script>
+
+class Solution {
+    public int solution(String s) {
+        int answer = 0;
+        answer = Integer.parseInt(s);
+
+
+        
+        return answer;
+    }
+}
+
