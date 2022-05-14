@@ -1,3 +1,4 @@
+<script src="https://gist.github.com/ljs7143/20dfe2bcb5790dd70c16228be80c520b.js"></script>
 
 class Solution {
     public String solution(int n) {
