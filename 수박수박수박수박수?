@@ -1,0 +1,20 @@
+class Solution {
+    public String solution(int n) {
+        String answer = "";
+        String oddword = "수";
+        String evenword = "박";
+        
+        for(int i =1 ; i<=n; i++){
+            if(i%2==1)
+                answer= answer+oddword;
+            else
+                answer=answer+evenword;
+        }
+        
+        
+        
+        
+        
+        return answer;
+    }
+}
