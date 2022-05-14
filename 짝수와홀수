@@ -1,0 +1,20 @@
+<script src="https://gist.github.com/ljs7143/9f377d8b90cb9fa5e71f8ed6166aa68e.js"></script>
+
+
+class Solution {
+    public String solution(int num) {
+        String answer = "";
+        if(num%2==1){
+            answer = "Odd";
+            System.out.println(answer);
+        }
+        
+        else if(num%2==-1){
+            answer = "Odd";
+            System.out.println(answer);
+        }
+        
+        else{
+            answer= "Even";
+            System.out.println(answer);
+        }
