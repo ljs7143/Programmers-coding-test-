@@ -1,0 +1,21 @@
+<script src="https://gist.github.com/ljs7143/7ead03c148bcfbba2a26b51402074866.js"></script>
+
+class Solution {
+    public int solution(int[] numbers) {
+        int answer = 0;
+        int len = numbers.length;
+        int sum = 0;
+        int num = 45;
+        
+        for(int i=0; i<len; i++){
+            sum = sum+numbers[i];
+            answer = num-sum;
+        }
+        
+        return answer;
+        
+        
+        
+        
+    }
+}
