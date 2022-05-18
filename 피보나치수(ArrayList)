@@ -1,0 +1,26 @@
+<script src="https://gist.github.com/ljs7143/d8ddbcffb854f8e95cacfc30c0e07570.js"></script>
+
+
+
+import java.util.ArrayList;
+
+class Solution {
+    public int solution(int n) {
+        int answer = 0;
+        int sum = 0;
+        ArrayList<Integer> fi = new ArrayList<Integer>();
+        fi.add(0);
+        fi.add(1);
+        
+        for(int i=2; i<=n; i++){
+            
+            sum = fi.get(i-2)+fi.get(i-1);
+            fi.add(sum);
+            answer = sum ;
+        }
+        
+    
+        
+        return answer;
+    }
+}
