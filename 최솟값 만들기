@@ -1,0 +1,18 @@
+<script src="https://gist.github.com/ljs7143/1aa93f5314d724eab1a79def04a62a5c.js"></script>
+import java.util.*;
+
+class Solution
+{
+    public int solution(int []A, int []B)
+    {
+        int answer = 0;
+        Arrays.sort(A);
+        Arrays.sort(B);
+        for(int i = 0; i<A.length; i++){
+            answer = answer + A[i]*B[B.length-i-1];
+            
+        }
+        
+        return answer;
+    }
+}
