@@ -1,0 +1,18 @@
+<script src="https://gist.github.com/ljs7143/570401b66df716d25625817e643eaba2.js"></script>
+
+class Solution {
+    public int solution(int n) {
+        int answer = 1;
+        int count =0;
+        for(int i=1; i<=n; i++){
+            int sum= i;
+            for(int j=i+1; sum < n; j++){
+                sum = sum+j;
+            }
+            if (sum == n) count++;
+        }
+           
+        answer = count;
+        return answer; 
+    }
+}
