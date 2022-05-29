@@ -1,0 +1,17 @@
+<script src="https://gist.github.com/ljs7143/2fb6cfbfd306894ac6b534c0aae69253.js"></script>
+
+public int solution(int[] absolutes, boolean[] signs) {
+        int answer = 0;
+        
+        for(int i=0; i<absolutes.length; i++){
+            if(signs[i] == true){
+                answer= answer+absolutes[i];
+            }
+            else
+                answer=answer-absolutes[i];
+        }
+        
+        return answer;
+        
+    }
+}
