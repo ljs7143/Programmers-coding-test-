@@ -1,0 +1,17 @@
+<script src="https://gist.github.com/ljs7143/73fe5f3b2b9472e9207e1048f40e2365.js"></script>
+
+class Solution {
+    public String solution(String[] seoul) {
+        String answer = "";
+        for(int i = 0; i<seoul.length; i++){
+            ///문자열은 equals사용
+            if(seoul[i].equals("Kim")){
+                answer = "김서방은 "+i+"에 있다"; 
+                break;
+                
+            }
+        }
+        return answer;
+    }
+}
+
