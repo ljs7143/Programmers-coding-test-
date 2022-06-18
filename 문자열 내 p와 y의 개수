@@ -1,0 +1,35 @@
+class Solution {
+    boolean solution(String s) {
+        boolean answer = true;
+        int countp = 0;
+        int county = 0;
+       
+        //문자열을 배열로 옮기는 과정입니다 
+        char[] arr = new char[s.length()];
+        for(int i =0 ; i<s.length(); i++){
+            arr[i] = s.charAt(i);
+        }
+        
+        
+        //배열을 탐색하며 P,p와 Y,y값의 개수를 count합니다
+        
+        for(int j=0; j<arr.length; j++){
+            //char형을 String값으로 casting합니다 
+            if(String.valueOf(arr[j]).equals("P")||String.valueOf(arr[j]).equals("p")){
+                countp++;
+            }
+            if(String.valueOf(arr[j]).equals("Y")||String.valueOf(arr[j]).equals("y")){
+                county++;
+            
+            }
+        }
+        if(countp==county){
+            answer = true;
+        }
+        else{
+            answer = false;
+        }
+
+        return answer;
+    }
+}
