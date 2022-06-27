@@ -1,0 +1,35 @@
+import java.util.*;
+class Solution {
+    public String solution(String s) {
+        //답으로 출력할 문자들을 이어붙이기 위해 StringBuffer()생성
+        StringBuffer sb = new StringBuffer();
+        //문자열을 배열로 생성(char형) 
+        String[] splitS = s.split(" ");
+        
+        for(int i=0; i<splitS.length; i++){
+            
+            
+            for(int j=0; j<splitS[i].length(); j++){
+                if(j%2==0){
+                        char C = splitS[i].charAt(j);
+                        String A = String.valueOf(C);
+                        A = A.toUpperCase();
+                        sb.append(A);
+                }                
+                else{
+                    char N = splitS[i].charAt(j);
+                    String B = String.valueOf(N);
+                    sb.append(B);
+                }
+                
+        
+            }
+            if(i!=splitS.length-1){
+                sb.append(" ");
+            }
+        }
+        String answer = sb.toString();
+        return answer;
+       
+    }
+}
