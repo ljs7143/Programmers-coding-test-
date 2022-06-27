@@ -1,0 +1,28 @@
+//차선책 1번 그냥 Uppercase, Lowercase를 사용해야할까 ?
+import java.util.*;
+class Solution {
+    public String solution(String s) {
+        
+        //답으로 출력할 문자들을 이어붙이기 위해 StringBuffer()생성
+        StringBuffer sb = new StringBuffer();
+        //문자열을 배열로 생성(char형) 
+        char[] arr = s.toCharArray();
+        //(배열을 돌며 아스키형 코드로 변환 )
+        for(int i =0; i<arr.length; i++){
+            char character = arr[i];
+            int ascii = (int) character;
+        //짝수번째 인덱스는 소문자를 대문자로 변환시키 때문에 아스키코드값을 32씩 뺴준다 
+            if(i%2==0){
+                ascii = ascii-32;
+                character = (char)ascii;
+                sb.append(String.valueOf(character));    
+            }
+        //홀수는 그냥 출력한다  
+            else{
+                sb.append(String.valueOf(character));
+            }
+        }  
+        String answer = sb.toString();
+        return answer;
+    }
+}
