@@ -1,0 +1,40 @@
+class Solution {
+    public String solution(String s, int n) {
+        String answer = "";
+        StringBuffer sb = new StringBuffer(); 
+        for(int i =0; i<s.length(); i++){
+            char ch = s.charAt(i);
+            
+            if(ch>='a'&&ch<='z'){
+                if(ch+n > 'z'){
+                    ch= (char)(ch-26+n);
+                    sb.append(String.valueOf(ch));
+                }
+                else{
+                    ch= (char)(ch+n);
+                    sb.append(String.valueOf(ch));
+                }
+            }
+            else if(ch>='A'&& ch<='z'){
+                
+                if(ch+n>'z'){
+                    ch= (char)(ch-26+n);
+                    sb.append(String.valueOf(ch));
+                }
+                else{
+                    ch= (char)(ch+n);
+                    sb.append(String.valueOf(ch));
+                }
+                
+            }
+          
+            else if(ch==' ')
+            {
+                sb.append(" ");
+               
+            } 
+        }
+        answer = sb.toString();
+        return answer;
+    }
+}
