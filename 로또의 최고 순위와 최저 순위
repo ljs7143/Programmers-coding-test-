@@ -1,0 +1,52 @@
+class Solution {
+    public int[] solution(int[] lottos, int[] win_nums) {
+        int count =0;
+        for(int i=0; i<win_nums.length; i++){
+            for(int k=0; k<lottos.length; k++){
+                if(lottos[i]==win_nums[k]){
+                    count++;
+                }
+            }
+        }
+        int containzero = 0;
+        for(int j=0; j<lottos.length; j++){
+            if(lottos[j]==0){
+                containzero++;
+            }
+        }
+        if(containzero == 6){
+            containzero=containzero-1;
+        }
+        
+        int least = 0;
+        
+        switch(count){
+            
+            case 0: 
+                least = 6;
+                break;
+            
+            case 1: 
+                least = 6;
+                break;
+            
+            case 2: 
+                least = 5;
+                break;
+            case 3:
+                least = 4;
+                break;
+            case 4: 
+                least = 3;
+                break;
+            case 5: 
+                least = 2;
+                break;
+            case 6: 
+                least = 1;
+                break;    
+        }
+        int[] answer = {least-containzero, least}; 
+        return answer;
+    }
+}
