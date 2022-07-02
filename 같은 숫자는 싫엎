@@ -1,0 +1,22 @@
+import java.util.*;
+import java.util.Arrays;
+
+public class Solution {
+    public int[] solution(int []arr) {
+        ArrayList<Integer> al = new ArrayList<Integer>();
+        for(int i=0; i<arr.length-1; i++){
+            if(arr[i]!=arr[i+1]){
+                al.add(arr[i]);
+            }
+            if(i==arr.length-2){
+                al.add(arr[arr.length-1]);
+            }
+        }
+        int[] answer = new int[al.size()];
+        
+        for(int j=0; j<al.size(); j++){
+            answer[j] = al.get(j);
+        }         
+        return answer;
+    }
+}
